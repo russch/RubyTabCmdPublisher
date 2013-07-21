@@ -1,0 +1,3 @@
+type,workbook,original data source,new data source,new filename,site
+extract,test,Sample - Superstore Sales (Excel),Sample - Superstore Sales (Extract),Extract.twb,test
+extract,test,Sample - Superstore Sales (Excel),Sample - Superstore Sales (Extract2),Extract2.twb,test
