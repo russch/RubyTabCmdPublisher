@@ -1,3 +1,3 @@
-type,workbook,original data source,new data source,new filename,site
-extract,test,Sample - Superstore Sales (Excel),Sample - Superstore Sales (Extract),Extract.twb,test
-extract,test,Sample - Superstore Sales (Excel),Sample - Superstore Sales (Extract2),Extract2.twb,test
+type,source server, destination server, source site, destination site,source workbook name, destination workbook name,original data source,new data source
+database,http://localhost, http://localhost, Default, Default,Tableau Rocks,Tableau Rocks.,localhost
+
