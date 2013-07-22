@@ -1,3 +1,4 @@
-type,source server, destination server, source site, destination site,source workbook name, destination workbook name,original data source,new data source
-database,http://localhost, http://localhost, Default, Default,Tableau Rocks,Tableau Rocks.,localhost
+type,source server, destination server, source site, destination site,source workbook name, destination workbook name,original data source,new data source, replacement extract
+database,http://localhost, http://localhost, Default, Default,Tableau Rocks,Tableau Rocks,.,localhost,
+extract,http://localhost, http://localhost, Site3, Site3, ExtractBook, ExtractBook,Sample - Superstore - English (Extract), New Fixed Up DataSource, RenamedExtract.tde
 
