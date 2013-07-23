@@ -10,7 +10,7 @@ include REXML
 @tabPassword = "foo"
 @tabServer = "http://localhost"
 @tabLogin = @tabCmd + " login -s " + @tabServer + " -u " + @tabUser + " -p " + @tabPassword
-@customerListFile = "C://Users//russch.SIMPLE//SkyDrive//Documents//My Documents//GitHub//RubyTabCmdPublisher//config.csv"
+@customerListFile = "C://Users//russch.SIMPLE//SkyDrive//Documents//My Documents//GitHub//RubyTabCmdPublisher//configServerToServer.csv"
 @dbUser = "sa"
 @dbPassword = "foo"
 @tabLogoff = @tabCmd + " logout"
@@ -75,7 +75,7 @@ def ChangeExtract(tbWorkBook, tbWorkBookDest, sourceSite, targetSite, newExt)#
   
   Publish(@fqdnFileName, tbWorkBookDest, targetSite)
   Process.waitall
- # File.delete(@fqdnFileName)
+  File.delete(@fqdnFileName)
 end
 
 def ChangeDB(tbWorkBook, tbWorkBookDest, sourceSite, targetSite, newDatabase )
@@ -171,7 +171,7 @@ def Main()
 	  if row[0] == "extract"
 		ChangeExtract(@sourceWorkbook, @targetWorkbook, @sourceSite, @targetSite,  @targetExtractName)
 	  elsif row[0] == "database"
-		#ChangeDB(@sourceWorkbook, @targetWorkbook, @sourceSite, @targetSite, @targetDataSource )
+		ChangeDB(@sourceWorkbook, @targetWorkbook, @sourceSite, @targetSite, @targetDataSource )
 	  end
 	end
 
