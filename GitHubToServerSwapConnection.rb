@@ -6,13 +6,13 @@ include REXML
 # Globals
 # tabcmd must be in PATH
 @tabCmd = "tabcmd.exe"
-@tabUser = "russch"
-@tabPassword = "Nyc7873462"
+@tabUser = "foo"
+@tabPassword = "bar"
 @tabServer = "http://localhost"
 @tabLogin = @tabCmd + " login -s " + @tabServer + " -u " + @tabUser + " -p " + @tabPassword
 @customerListFile = "C://rails_projects//RubyTabCmdPublisher//configGitToServer.csv"
-@dbUser = "sa"
-@dbPassword = "P@ssw0rd123"
+@dbUser = "foo"
+@dbPassword = "bar"
 @tabLogoff = @tabCmd + " logout"
 
 =begin

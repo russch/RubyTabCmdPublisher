@@ -6,8 +6,8 @@ include REXML
 @zip = "\"c:\\Program Files (x86)\\7-Zip\\7z.exe\" e -y -oc:\\tableauScripts\\Extract"
 # tabcmd must be in PATH
 @tabCmd = "tabcmd.exe"
-@tabUser = "russch"
-@tabPassword = "foo"
+@tabUser = "foo"
+@tabPassword = "bar"
 @tabServer = "http://localhost"
 @tabLogin = @tabCmd + " login -s " + @tabServer + " -u " + @tabUser + " -p " + @tabPassword
 @customerListFile = "C://Users//russch.SIMPLE//SkyDrive//Documents//My Documents//GitHub//RubyTabCmdPublisher//configServerToServer.csv"
