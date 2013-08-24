@@ -6,13 +6,13 @@ include REXML
 # Globals
 # tabcmd must be in PATH
 @tabCmd = "tabcmd.exe"
-@tabUser = "foo"
-@tabPassword = "bar"
-@tabServer = "http://localhost"
+@tabUser = "simple\\flinstone"
+@tabPassword = "1LikeBetty!"
+@tabServer = "http://localhost:8000"
 @tabLogin = @tabCmd + " login -s " + @tabServer + " -u " + @tabUser + " -p " + @tabPassword
-@customerListFile = "C://rails_projects//RubyTabCmdPublisher//configGitToServer.csv"
-@dbUser = "foo"
-@dbPassword = "bar"
+@customerListFile = "C://tableauscripts//configGitToServer.csv"
+@dbUser = "sa"
+@dbPassword = "P@ssw0rd123"
 @tabLogoff = @tabCmd + " logout"
 
 =begin
@@ -129,7 +129,7 @@ def Main()
 
 
 	  ChangeDB(@sourceWorkbook, @targetWorkbook, @sourceTag, @targetSite, @targetDataSource )
-
+	end
 
 	  system(@tabLogoff)
 end
