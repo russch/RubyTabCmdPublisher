@@ -6,11 +6,11 @@ include REXML
 @zip = "\"c:\\Program Files (x86)\\7-Zip\\7z.exe\" e -y -oc:\\tableauScripts\\Extract"
 # tabcmd must be in PATH
 @tabCmd = "tabcmd.exe"
-@tabUser = "foo"
-@tabPassword = "bar"
-@tabServer = "http://localhost"
+@tabUser = "simple\\flinstone"
+@tabPassword = "1LikeBetty!"
+@tabServer = "http://localhost:8000"
 @tabLogin = @tabCmd + " login -s " + @tabServer + " -u " + @tabUser + " -p " + @tabPassword
-@customerListFile = "C://Users//russch.SIMPLE//SkyDrive//Documents//My Documents//GitHub//RubyTabCmdPublisher//configServerToServer.csv"
+@customerListFile = "C://tableauscripts//configServerToServer.csv"
 @dbUser = "sa"
 @dbPassword = "foo"
 @tabLogoff = @tabCmd + " logout"
@@ -59,11 +59,12 @@ def ChangeExtract(tbWorkBook, tbWorkBookDest, sourceSite, targetSite, newExt)#
   File.open(@tbUnZippedWorkBookPath) do |config|
     twb = Document.new(config)
     
-	twb.elements.each("*/datasources/datasource/extract/connection") do |element| 
-	  # Change the extract file name to new one	
+	twb.elements.each("*/datasources/datasource/connection") do |element| 
+	  # Change the extract file name in the original connectionto new one	
       element.attributes["dbname"]="c:\\tableauScripts\\Extract\\#{newExt}" 
     end
 	
+
 	#Write to Outgoing folder
     @fqdnFileName = "c:\\tableauScripts\\Outgoing\\" + tbWorkBookDest + ".twb"
 
